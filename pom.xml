@@ -21,11 +21,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.incode</groupId>
+        <artifactId>incode-parent</artifactId>
+        <version>1.13.2.20170214-2237</version>
+        <relativePath/>
+    </parent>
+
     <groupId>org.isisaddons.app</groupId>
     <artifactId>todoapp</artifactId>
-    <version>1.13.0-SNAPSHOT</version>
+    <version>1.14.0-SNAPSHOT</version>
 
-    <name>Isis Addons ToDoApp</name>
+    <name>App ToDoApp</name>
 
     <packaging>pom</packaging>
 
@@ -36,22 +43,22 @@
     <properties>
         <isis.version>1.13.0</isis.version>
 
-        <isis-metamodel-paraname8.version>1.13.0-SNAPSHOT</isis-metamodel-paraname8.version>
+        <isis-metamodel-paraname8.version>1.13.0</isis-metamodel-paraname8.version>
 
-        <isis-module-audit.version>1.13.0-SNAPSHOT</isis-module-audit.version>
-        <isis-module-command.version>1.13.0-SNAPSHOT</isis-module-command.version>
-        <isis-module-publishing.version>1.13.0-SNAPSHOT</isis-module-publishing.version>
-        <isis-module-security.version>1.13.0-SNAPSHOT</isis-module-security.version>
-        <isis-module-sessionlogger.version>1.13.0-SNAPSHOT</isis-module-sessionlogger.version>
-        <isis-module-settings.version>1.13.0-SNAPSHOT</isis-module-settings.version>
-        <isis-module-togglz.version>1.13.0-SNAPSHOT</isis-module-togglz.version>
+        <isis-module-audit.version>1.13.0</isis-module-audit.version>
+        <isis-module-command.version>1.13.0</isis-module-command.version>
+        <isis-module-publishing.version>1.13.0</isis-module-publishing.version>
+        <isis-module-security.version>1.13.0</isis-module-security.version>
+        <isis-module-sessionlogger.version>1.13.0</isis-module-sessionlogger.version>
+        <isis-module-settings.version>1.13.0</isis-module-settings.version>
+        <isis-module-togglz.version>1.13.0</isis-module-togglz.version>
 
-        <isis-module-docx.version>1.13.0-SNAPSHOT</isis-module-docx.version>
+        <isis-module-docx.version>1.13.0</isis-module-docx.version>
 
-        <isis-wicket-excel.version>1.13.0-SNAPSHOT</isis-wicket-excel.version>
-        <isis-wicket-summernote.version>1.13.0-SNAPSHOT</isis-wicket-summernote.version>
-        <isis-wicket-fullcalendar2.version>1.13.0-SNAPSHOT</isis-wicket-fullcalendar2.version>
-        <isis-wicket-gmap3.version>1.13.0-SNAPSHOT</isis-wicket-gmap3.version>
+        <isis-wicket-excel.version>1.13.0</isis-wicket-excel.version>
+        <isis-wicket-summernote.version>1.13.0</isis-wicket-summernote.version>
+        <isis-wicket-fullcalendar2.version>1.13.0</isis-wicket-fullcalendar2.version>
+        <isis-wicket-gmap3.version>1.13.0</isis-wicket-gmap3.version>
 
         <jbcrypt.version>0.3m</jbcrypt.version>
         <assertj-core.version>2.0.0</assertj-core.version>
@@ -64,30 +71,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     </properties>
-
-    <repositories>
-        <repository>
-            <id>apache.snapshots</id>
-            <name>Apache Snapshots</name>
-            <url>https://repository.apache.org/content/repositories/snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>Cloudbees snapshots</id>
-            <url>http://repository-estatio.forge.cloudbees.com/snapshot/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-    </repositories>
 
     <build>
         <pluginManagement>
@@ -411,18 +394,6 @@
                     <scope>provided</scope>
                 </dependency>
             </dependencies>
-        </profile>
-
-        <profile>
-            <id>m2e</id>
-            <activation>
-                <property>
-                    <name>m2e.version</name>
-                </property>
-            </activation>
-            <build>
-                <directory>target-ide</directory>
-            </build>
         </profile>
     </profiles>
 
